@@ -1,5 +1,5 @@
 <template>
-    <h1 class="text-4xl flex  justify-center">Create a Product</h1>
+    <h1 class="text-4xl flex  justify-center mt-10 mb-10">Create a Product</h1>
     <div class="border-solid border-2 border-grey-600 flex  justify-center items-center ">
 <div class="w-3/5  mt-24  ">
     <form class="w-full  ">

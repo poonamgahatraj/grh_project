@@ -2,7 +2,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import product_detail from '../components/product_detail.vue';
-import product_Info from '../components/product_Info.vue';
+import product_form from '../components/product_form.vue';
 
 
 const router = createRouter({
@@ -17,9 +17,9 @@ const router = createRouter({
      
 
     {
-      path: '/product_Info',
-      name: 'product_Info',
-      component: product_Info
+      path: '/product_form',
+      name: 'product_form',
+      component: product_form
     },
    
   ]
