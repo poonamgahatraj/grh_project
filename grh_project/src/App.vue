@@ -8,7 +8,7 @@ import product_detail from './components/product_detail.vue';
 <template>
   
 
-<product_detail/>
+
   <RouterView />
 </template>
 
