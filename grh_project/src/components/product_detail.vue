@@ -2,7 +2,7 @@
     <h1 class="text-2xl font-bold ">Product families</h1>
   <div class="flex  mt-14">
    <div v-for="item in product_family">
-    <div class="mr-10 border-2 border-solid w-24 text-center text-sky-400 font-semibold">
+    <div class="mr-10 border-2 border-slate-50 w-24 text-center text-sky-400 font-semibold">
       {{ item.name }}
     </div>
      
@@ -10,7 +10,7 @@
   </div>
 
 
-<div class="flex justify-between items-center  mb-12">
+<div class="flex justify-between items-center content-center  mb-12">
   <h1 class="text-2xl font-bold mt-14 ">Product </h1>
   <button class="border-2 border-solid bg-sky-500 text-white h-10 w-28"  @click="redirectToproduct_form" >Add Product</button>
   
@@ -25,8 +25,8 @@
     <div class="flex justify-between ">
       <div v-for="item in product" class="box">
         <div class="flex mt-2 ml-2">
-          <div class="mr-4 border-2 border-solid w-16 text-center text-sky-400 font-semibold">{{ item.year }}</div>
-          <div class=" border-2 border-solid w-16 text-center text-green-500 font-semibold"> {{ item.name }}</div>
+          <div class="mr-4 border-2 border-slate-50 w-16 text-center text-sky-400 font-semibold">{{ item.year }}</div>
+          <div class=" border-2 border-slate-50 w-16 text-center text-green-500 font-semibold"> {{ item.name }}</div>
           
         </div>
         <div class="mt-4">
@@ -37,6 +37,14 @@
 
      
     </div>
+
+    <div class="flex justify-between ">
+      <div  v-for="item in product_detail" class="box1" >
+       <p class="font-semibold">{{ item.product }}</p> 
+        <p class="text-sky-400 font-semibold text-sm mt-2">{{ item.view }}</p>
+    </div>
+    </div>
+   
     
   
   <router-link to="/product_form">product_form</router-link>
@@ -52,24 +60,27 @@ export default{
                             {name:"Add Family"}
           ],
 
-          product:[{year:"2021",name:"Nest",image:"public/assets/buds.jpg"},
-          {year:"2021",name:"Nest",image:"public/assets/Google-Pixel-6.jpg"},
-          {year:"2021",name:"Pixel",image:"public/assets/lenovosmartclock4.jpg"},
+          product:[{year:"2021",name:"Nest",image:"public/assets/41l2uNYoNHL._SL500_.jpg"},
+          {year:"2021",name:"Nest",image:"public/assets/nest cam.jpg"},
+          {year:"2021",name:"Pixel",image:"public/assets/budspro.jpg"},
           {year:"2021",name:"Fitbit",image:"public/assets/OIP (1).jpg"},
-          {year:"2021",name:"Pixel",image:"public/assets/Pixel-6-Pro.webp"},
-          {year:"2021",name:"Lenovo",image:"public/assets/R.jpg"},
+          {year:"2021",name:"Pixel",image:"public/assets/promax.jpg"},
+          {year:"2021",name:"Lenovo",image:"public/assets/lenovoclock.webp"},
         ],
         
-        images:["public/assets/buds.jpg",
-        "public/assets/Google-Pixel-6.jpg",
-        "public/assets/lenovosmartclock4.jpg",
-        "public/assets/OIP (1).jpg",
-        "public/assets/Pixel-6-Pro.webp",
-        "public/assets/R.jpg",
+        product_detail:[{product:"Nest Hub Max",view:"view more >"},
+        {product:"Nest Cam",view:"view more >"},
+        {product:"Pixel Buds Pro",view:"view more >"},
+        {product:"Fitbit Charge 5",view:"view more >"},
+        {product:"Pixel 6 Pro",view:"view more >"},
+        {product:"Lenovo Clock",view:"view more >"},
+      
+      
+      ]
         
         
 
-      ]
+      
         }
     },
 
@@ -87,7 +98,7 @@ export default{
 
   width:15%;
   height:15%;
-  border:2px solid#00000029;
+  border:1px solid#5F63681A;
   margin-top:5px;
  
  
@@ -101,5 +112,16 @@ export default{
   justify-content: space-between;
 }
 
+.box1{
+
+
+width:15%;
+
+
+margin-top:5px;
+
+
+
+}
 
 </style>
