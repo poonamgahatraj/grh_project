@@ -1,8 +1,11 @@
 <template>
-    <h1 class="text-2xl font-bold ">Product families</h1>
+  <div  class="p-10">
+
+  
+    <p class="text-4xl font-semibold colors ">Product families</p>
   <div class="flex  mt-14">
    <div v-for="item in product_family">
-    <div class="mr-10 border-2 border-slate-50 w-24 text-center text-sky-400 font-semibold">
+    <div class="mr-10 border-2 border-slate-50 w-40 h-14 text-center  text-lg font-semibold flex justify-center items-center color ">
       {{ item.name }}
     </div>
      
@@ -10,8 +13,8 @@
   </div>
 
 
-<div class="flex justify-between items-center content-center  mb-12">
-  <h1 class="text-2xl font-bold mt-14 ">Product </h1>
+<div class="flex justify-between items-center   mb-12 mt-14">
+  <h1 class="text-4xl font-semibold colors ">Product </h1>
   <button class="border-2 border-solid bg-sky-500 text-white h-10 w-28"  @click="redirectToproduct_form" >Add Product</button>
   
 </div>
@@ -25,12 +28,12 @@
     <div class="flex justify-between ">
       <div v-for="item in product" class="box">
         <div class="flex mt-2 ml-2">
-          <div class="mr-4 border-2 border-slate-50 w-16 text-center text-sky-400 font-semibold">{{ item.year }}</div>
-          <div class=" border-2 border-slate-50 w-16 text-center text-green-500 font-semibold"> {{ item.name }}</div>
+          <div class="mr-4 border-2 border-slate-50 w-16 text-center text-sky-400 font-semibold bg-slate-50 color">{{ item.year }}</div>
+          <div class=" border-2 border-slate-50 w-16 text-center text-green-500 font-semibold bg-slate-50 color1"> {{ item.name }}</div>
           
         </div>
         <div class="mt-4">
-          <img  :src="item.image" style="width:100%;height:200px">
+          <img  :src="item.image" style="width:100%;height:160px">
         </div>
       </div>
       
@@ -40,9 +43,11 @@
 
     <div class="flex justify-between ">
       <div  v-for="item in product_detail" class="box1" >
-       <p class="font-semibold">{{ item.product }}</p> 
+       <p class="font-medium google-grey">{{ item.product }}</p> 
         <p class="text-sky-400 font-semibold text-sm mt-2">{{ item.view }}</p>
     </div>
+    </div>
+
     </div>
    
     
@@ -96,10 +101,11 @@ export default{
 .box{
 
 
-  width:15%;
+  width:16%;
   height:15%;
   border:1px solid#5F63681A;
   margin-top:5px;
+  border-radius:3px;
  
  
   
@@ -110,18 +116,28 @@ export default{
   height:400px;
   display:flex;
   justify-content: space-between;
+
+}
+
+.google-grey{
+  color:#5F6368
 }
 
 .box1{
-
-
 width:15%;
-
-
 margin-top:5px;
+}
 
-
-
+.color{
+  background:#4285F40D;
+  color:#4285F4;
+  
+}
+.colors{
+  color:#5F6368
+}
+.color1{
+  color:#0F9D58
 }
 
 </style>
